@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 * {
   padding: 0;
@@ -8,43 +8,51 @@
 
 body {
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 .column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex: 1;
-  border: 1px solid black;
-  background-color: darkred;
 }
 
 .column h2 {
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  transition: background 300ms;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease-out;
 }
 
-.column h2:hover {
-  background: rgba(0, 0, 0, 0.1);
+.column h2:hover,
+.column h2.hover-text {
   cursor: pointer;
 }
 
 .column button {
-  padding: 10px;
+  padding: 0.5rem;
   border: none;
-  border-radius: 10px;
-  background: transparent;
+  border-radius: 0.5rem;
   font-size: 1.5rem;
+  background-color: transparent;
   color: #fff;
-  transition: background 300ms;
+  transition: all 0.15s ease-out;
 }
 
-.column button:hover {
-  background: rgba(0, 0, 0, 0.1);
+.column button:hover,
+.column button.hover-button {
   cursor: pointer;
+}
+
+@media (min-width: 770px) {
+  body {
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: column;
+  }
 }
