@@ -1,1 +1,18 @@
-{}
+{
+  "singleQuote": true,
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": ["*.html", "legacy/**/*.js"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}
