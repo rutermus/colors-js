@@ -34,8 +34,8 @@ const setHoverProperties = (items) => {
     items[i].addEventListener('mouseover', () => {
       items[i].style.backgroundColor =
         luminance > 0.5
-          ? chroma(colors[i]).darken(2)
-          : chroma(colors[i]).brighten(2);
+          ? chroma(colors[i]).darken(3)
+          : chroma(colors[i]).brighten(3);
 
       items[i].style.color =
         luminance > 0.5
