@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  position: relative;
   font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -24,27 +25,71 @@ body {
 .column h2 {
   padding: 0.5rem;
   border-radius: 0.5rem;
+  background: transparent;
   transition: all 0.15s ease-out;
 }
 
-.column h2:hover,
-.column h2.hover-text {
+.column h2:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(255, 255, 255, 0.15)
+  );
   cursor: pointer;
 }
 
+.column h2:active {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(255, 255, 255, 0.15)
+  );
+}
+
 .column button {
-  padding: 0.5rem;
+  padding: 0;
   border: none;
+  outline: 0;
   border-radius: 0.5rem;
   font-size: 1.5rem;
-  background-color: transparent;
+  background: transparent;
   color: #fff;
   transition: all 0.15s ease-out;
 }
 
-.column button:hover,
-.column button.hover-button {
+.column button:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(255, 255, 255, 0.15)
+  );
   cursor: pointer;
+}
+
+.column button:active {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(255, 255, 255, 0.15)
+  );
+}
+
+.column button i {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.desktop-guide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  font-size: 1rem;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.35));
+  color: #ffffff;
 }
 
 @media (min-width: 770px) {
@@ -54,5 +99,15 @@ body {
 
   .column {
     flex-direction: column;
+  }
+
+  .desktop-guide {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
   }
 }
